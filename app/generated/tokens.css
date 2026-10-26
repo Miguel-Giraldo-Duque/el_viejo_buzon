@@ -1,0 +1,55 @@
+/* Generated from brand.yaml by scripts/generate-theme.mjs. Do not edit by hand. */
+/* el-viejo-buzon v2 final_demo 2026-10-26 */
+:root {
+  --bg: #FFFFFF;
+  --surface: #F7EEDC;
+  --brand: #127863;
+  --text-strong: #06382B;
+  --text-weak: #3B685D;
+  --stroke-strong: #788783;
+  --stroke-weak: #E1E5E4;
+  --accent-red: #AE1E25;
+  --font-heading: "Alfa Slab One", Georgia, serif;
+  --font-body: "Chivo", system-ui, sans-serif;
+  --space-3xs: 0.382rem;
+  --space-2xs: 0.618rem;
+  --space-xs: 1rem;
+  --space-s: 1.618rem;
+  --space-m: 2.618rem;
+  --space-l: 4.236rem;
+  --space-xl: 6.854rem;
+  --section-y: clamp(var(--space-m), 8vw, var(--space-xl));
+  --container: 72rem;
+  --gutter: clamp(1rem, 4vw, 1.618rem);
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-h3: 1.618rem;
+  --fs-h2: clamp(1.618rem, 5vw, 2.618rem);
+  --fs-h1: clamp(2.618rem, 8vw, 4.236rem);
+  --lh-heading: 1.1;
+  --lh-body: 1.618;
+  --r-sm: 0.382rem;
+  --r-md: 0.618rem;
+  --r-full: 9999px;
+  --border-thin: 2px solid var(--stroke-strong);
+  --border-bold: 3px solid var(--text-strong);
+  --border-stamp: 2px dashed var(--accent-red);
+  --shadow-card: 4px 4px 0 var(--text-strong);
+  --focus-ring: 3px solid var(--brand);
+  --background: var(--bg);
+  --foreground: var(--text-strong);
+  --card: var(--surface);
+  --card-foreground: var(--text-strong);
+  --primary: var(--brand);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--text-strong);
+  --muted: var(--surface);
+  --muted-foreground: var(--text-weak);
+  --accent: var(--surface);
+  --accent-foreground: var(--brand);
+  --border: var(--stroke-weak);
+  --input: var(--stroke-strong);
+  --ring: var(--brand);
+  --radius: 0.618rem;
+}

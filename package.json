@@ -1,0 +1,40 @@
+{
+  "name": "el-viejo-buzon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 47231 -H 0.0.0.0",
+    "tokens": "node scripts/generate-theme.mjs",
+    "predev": "node scripts/generate-theme.mjs",
+    "prebuild": "node scripts/generate-theme.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/inline-export.mjs",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@fontsource/alfa-slab-one": "^5.3.0",
+    "@fontsource/chivo": "^5.3.0",
+    "@radix-ui/react-slot": "^1.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "js-yaml": "^5.5.0",
+    "lucide-react": "^1.61.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "puppeteer-core": "^25.16.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

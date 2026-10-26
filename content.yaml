@@ -1,0 +1,201 @@
+# Contenido del local. Para otro local, reemplazá este archivo, brand.yaml y public/.
+# Los textos de reseñas son textuales. No agregues puntajes ni precios.
+
+meta:
+  slug: el-viejo-buzon
+  name: El Viejo Buzón
+  lang: es
+  title: El Viejo Buzón
+  description: Bar y bodegón en Neuquén 1100, Caballito, frente a la cancha de Ferro. Abierto en 1987.
+  robots: noindex, nofollow
+
+contact:
+  phone_display: "+54 11 4433-3061"
+  phone_tel: "tel:+541144333061"
+  email: elviejobuzon@hotmail.com
+  instagram: "@elviejobuzon"
+  instagram_url: "https://www.instagram.com/elviejobuzon/"
+
+address:
+  line: Neuquén 1100 (esq. Espinosa), Caballito, CABA
+  neighborhood_note: A 0,82 km de Plaza Irlanda.
+  maps_url: "https://www.google.com/maps/search/?api=1&query=El+Viejo+Buz%C3%B3n+Neuqu%C3%A9n+1100+Caballito+Buenos+Aires"
+  maps_label: Cómo llegar
+  photo: /fotos/fachada-buzon.jpg
+  photo_alt: Fachada verde de El Viejo Buzón en la esquina, con el buzón rojo junto a la puerta.
+  photo_width: 534
+  photo_height: 534
+
+footer:
+  lines:
+    - elviejobuzon@hotmail.com
+    - Instagram @elviejobuzon
+  credit: "Fotos de Toto y de los platos: Maxi Failla, Clarín, mayo de 2026. Fachada: carta.menu. El wordmark es una propuesta: no hay logo oficial del bar."
+
+sections:
+  hero:
+    enabled: true
+    lede: Bar y bodegón en Neuquén 1100, Caballito, frente a la cancha de Ferro.
+    story: Abrió en 1987, idea de Toto Evangelista, para que trabajara su hermano. La barra es el banco de soldador de su padre, del taller de Neuquén 1080. El buzón rojo fue restaurado y volvió a la esquina.
+    quote: Esta es una esquina con magia.
+    quote_source: Clarín
+    postmark: "Caballito · Neuquén 1100 · frente a Ferro"
+    call_label: Llamar al +54 11 4433-3061
+    image: /fotos/clarin-portada-esquina.jpg
+    image_alt: Toto Evangelista y un mozo con camisa verde sostienen platos en el salón de El Viejo Buzón. Detrás hay camisetas de fútbol.
+    image_width: 2000
+    image_height: 1500
+    object_position: 35% 40%
+
+  reviews:
+    enabled: true
+    title: Reseñas
+    items:
+      - text: "Es un Bar con mucha historia linda de conocer, ubicado en el clasico barrio de Caballito, a pocos metros de la Cancha de Ferro, atendido por su dueno Toto Evangelista que te hace sentir como si estuvieras en tu casa."
+        signature: Reseña en carta.menu
+        source_label: carta.menu
+        url: https://carta.menu/restaurants/buenos-aires/el-viejo-buzon
+        date: null
+        initial: null
+      - text: "Bar pintoresco en caballito. Atención muy buena tanto de los moos y mozas como de su propietario que nos acercó historias del barrio y del museo. Comimos una riquísima picada acompañada de aperitivos en un domingo lluvioso de verano. Recomendable para ir antes o después de visitar el hermoso museo de esculturas, que fue casa de Luis Perlotti. Imperdible!"
+        signature: Reseña en carta.menu
+        source_label: carta.menu
+        url: https://carta.menu/restaurants/buenos-aires/el-viejo-buzon
+        date: null
+        initial: null
+      - text: "Impecable. Lugar notable y emblemático de la zona, con una particular historia que su dueño se anima a contar en las mesas."
+        signature: Reseña en carta.menu
+        source_label: carta.menu
+        url: https://carta.menu/restaurants/buenos-aires/el-viejo-buzon
+        date: null
+        initial: null
+      - text: "Un bodegón con todas las letras. El menú del día era milanesa de pollo con fritas, la cual podías optar hacerla napolitana por una diferencia ínfima de precio. Ri-qui-si-ma. La atención de la moza es excelente, acogedora, simpática."
+        signature: Betiana Tetti
+        source_label: Google, en Sluurpy
+        url: https://www.sluurpy.com/es/buenos-aires/restaurant/2284831/el-viejo-buzon
+        date: 27/02/2022
+        initial: B
+      - text: "Excelente. Una atención personalizada y maravillosa, muy amable que te hacía sentir en familia. Radio en vivo y buena comida. Voy a volver sin dudar."
+        signature: Jose Ignacio Sherman
+        source_label: Google, en Sluurpy
+        url: https://www.sluurpy.com/es/buenos-aires/restaurant/2284831/el-viejo-buzon
+        date: 08/10/2023
+        initial: J
+
+  menu:
+    enabled: true
+    title: La carta
+    price_note: Precios pendientes de confirmar.
+    dessert_note: "Postres: pendiente. La sección figura en la carta y no se pudo leer."
+    photos:
+      - src: /fotos/plato-suprema-maryland.jpg
+        alt: Suprema Maryland empanada, con guarnición, en un plato del bar.
+        caption: Suprema Maryland
+        width: 720
+        height: 480
+      - src: /fotos/plato-rabas.jpg
+        alt: Rabas fritas servidas en una fuente.
+        caption: Rabas
+        width: 1256
+        height: 619
+      - src: /fotos/plato-tortilla-vaga.jpg
+        alt: Tortilla vaga en un plato, con una porción separada.
+        caption: Tortilla vaga
+        width: 720
+        height: 480
+    categories:
+      - name: Raciones
+        items:
+          - Empanadas fritas de carne cortada a cuchillo
+          - Empanadas fritas de jamón y queso
+          - Bocaditos de acelga
+          - Croquetas de pollo y verdeo
+          - Croquetas de jamón crudo con portobello
+          - Albóndigas con fileto
+          - Tortilla clásica
+          - Tortilla española
+          - Rabas, provenzal o con tártara
+          - Provoleta clásica
+          - Provoleta Buzón
+          - Matambre casero con rusa
+          - Jamón crudo 18 meses
+          - Tabla de quesos
+          - Lengua a la vinagreta
+          - Morrones al ajillo
+          - Gambas al ajillo
+          - Picada del tablón (para 3)
+      - name: Picadas
+        items:
+          - Media picada
+          - Picada de calentitos
+          - Picada de mar
+      - name: Milanesas
+        items:
+          - Clásica
+          - Napolitana
+          - A caballo
+          - Fugazzeta
+          - Roquefort con nueces
+          - Suprema
+          - Suprema Maryland
+          - Milanesa para compartir
+      - name: Pastas caseras
+        items:
+          - Ñoquis
+          - Tallarines
+          - Ravioles de ricota
+          - Sorrentinos de jamón y queso
+      - name: Sándwiches
+        items:
+          - Jamón crudo Cárdenas
+      - name: Panadería de doña Carmen
+        items:
+          - Medialunas de grasa
+          - Medialunas de manteca
+          - Medialunas rellenas
+      - name: Platos de olla
+        items:
+          - Guiso de lentejas
+          - Mondongo
+          - Locro
+
+  about:
+    enabled: false
+    title: El lugar
+    paragraphs:
+      - En la esquina hubo una panadería desde 1910. La panadera fue doña Carmen y el inmueble hoy es de sus nietas. Después funcionó una fiambrería.
+      - El bar es Bar Notable desde 2014. La esquina fue declarada histórica en 1993.
+      - Toto está a cargo desde 2011, según Clarín, o desde 2012, según La Nación.
+
+  events:
+    enabled: false
+    title: Agenda
+    paragraphs:
+      - Pendiente de confirmar si siguen los shows de tango y rock y Radio Conectividad después de la reapertura.
+
+  hours:
+    enabled: true
+    title: Horarios
+    rows:
+      - label: Lunes a jueves
+        value: 9 a 0
+      - label: Viernes
+        value: 9 a 1
+      - label: Sábado
+        value: consultar
+      - label: Domingo
+        value: 9 a 0
+
+  cta:
+    enabled: false
+    title: ""
+    text: ""
+
+  whatsapp_bar:
+    enabled: false
+    number: null
+    label: WhatsApp
+
+  mobile_bar:
+    enabled: true
+    call_label: Llamar

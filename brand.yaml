@@ -1,0 +1,226 @@
+# SISTEMA VISUAL · El Viejo Buzón (Neuquén 1100 esq. Espinosa, Caballito)
+# Formato estándar del Diseñador UI Sitios (mismo esquema que kikiriki/prompt-cursor.yaml).
+# Stack destino: template Next.js + shadcn (Haru). css_variables van a :root y shadcn_mapping a globals.css.
+
+meta:
+  slug: el-viejo-buzon
+  local: "El Viejo Buzón · bar y bodegón"
+  estado: final_demo   # v2: paleta recalculada con los colores relevados de las fotos (ficha.md, 26/10)
+  version: 2
+  fecha: "2026-10-26"
+  foco_mvp: ["hero", "reseñas"]
+  fuentes: ["ficha.md (básica)", "pitch.md", "https://turismo.buenosaires.gob.ar/es/otros-establecimientos/el-viejo-buzon", "https://carta.menu/restaurants/buenos-aires/el-viejo-buzon"]
+  pendiente_confirmar: ["permiso de fotos de Clarín (Maxi Failla) y de usuarios de carta.menu", "si el 11 4433-3061 es WhatsApp", "horario del sábado", "si siguen con radio en vivo después de la reapertura"]
+  contexto: "Reabrió entre abril y mayo de 2026 después de una reforma, con nuevos socios. Toto sigue siendo la cara del bar (foto de Clarín, mayo 2026)."
+
+css_variables:
+  --bg: "#FFFFFF"
+  --surface: "#F7EEDC"
+  --brand: "#127863"
+  --text-strong: "#06382B"
+  --text-weak: "#3B685D"
+  --stroke-strong: "#788783"
+  --stroke-weak: "#E1E5E4"
+  --accent-red: "#AE1E25"   # rojo del buzón: solo wordmark, matasellos y estampillas
+  --font-heading: '"Alfa Slab One", Georgia, serif'
+  --font-body: '"Chivo", system-ui, sans-serif'
+  --space-3xs: "0.382rem"
+  --space-2xs: "0.618rem"
+  --space-xs: "1rem"
+  --space-s: "1.618rem"
+  --space-m: "2.618rem"
+  --space-l: "4.236rem"
+  --space-xl: "6.854rem"
+  --section-y: "clamp(var(--space-m), 8vw, var(--space-xl))"
+  --container: "72rem"
+  --gutter: "clamp(1rem, 4vw, 1.618rem)"
+  --fs-sm: "0.875rem"
+  --fs-base: "1rem"
+  --fs-h3: "1.618rem"
+  --fs-h2: "clamp(1.618rem, 5vw, 2.618rem)"
+  --fs-h1: "clamp(2.618rem, 8vw, 4.236rem)"
+  --lh-heading: "1.1"
+  --lh-body: "1.618"
+  --r-sm: "0.382rem"
+  --r-md: "0.618rem"
+  --r-full: "9999px"
+  --border-thin: "2px solid var(--stroke-strong)"
+  --border-bold: "3px solid var(--text-strong)"
+  --border-stamp: "2px dashed var(--accent-red)"
+  --shadow-card: "4px 4px 0 var(--text-strong)"
+  --focus-ring: "3px solid var(--brand)"
+
+# Equivalencia para el template shadcn (globals.css, en hex o convertido a HSL/OKLCH según la versión del template)
+shadcn_mapping:
+  --background: "var(--bg)"
+  --foreground: "var(--text-strong)"
+  --card: "var(--surface)"
+  --card-foreground: "var(--text-strong)"
+  --primary: "var(--brand)"
+  --primary-foreground: "#FFFFFF"     # 5.40 sobre brand
+  --secondary: "var(--surface)"
+  --secondary-foreground: "var(--text-strong)"
+  --muted: "var(--surface)"
+  --muted-foreground: "var(--text-weak)"   # 5.48 sobre surface
+  --accent: "var(--surface)"
+  --accent-foreground: "var(--brand)"
+  --border: "var(--stroke-weak)"           # decorativo
+  --input: "var(--stroke-strong)"          # 3.76, interactivo
+  --ring: "var(--brand)"
+  --radius: "0.618rem"
+  nota: "Botón outline y Input usan --input (stroke fuerte), no --border."
+
+palette_method:
+  descripcion: "Método de Miguel, paleta monocromática de 5 partes, variación light. Ratios WCAG 2.x contra el fondo #FFFFFF; también se reportan contra --surface #F7EEDC, donde van las postales."
+  colores_relevados: "Verde fachada/Ferro #158B74, verde oscuro #122E25, rojo buzón #AE1E25, madera #664833, crema damero #F7EEDC, dorado #B88840 (ficha.md, extraídos de las fotos)."
+  fondo: { valor: "#FFFFFF", regla: "Base light. El crema real del damero (#F7EEDC) queda como superficie de las postales, no como fondo general." }
+  color_brand:
+    regla: "De los colores de marca, el de mejor contraste con el fondo; objetivo 4.5:1."
+    aplicado: "El verde de la fachada #158B74 da 4.22 y no llega. Bajando solo el brillo (L 31 a 27) queda #127863: 5.40 en blanco y 4.68 en crema, así que el verde también sirve como texto sobre las postales. Es el color identitario: fachada, puerta y Ferro."
+    descartados: { rojo_buzon: "6.97, pero es un acento y con el verde da 1.29: van juntos solo si no dependen del contraste", madera: "8.27, se lee marrón genérico de parrilla", dorado: "3.17, no llega" }
+  texto_fuerte: { regla: "Brand con menos brillo y más saturación, para textos principales; mínimo 4.5:1.", aplicado: "#06382B (13.06; 11.33 en crema). Cercano al verde oscuro real de la fachada #122E25." }
+  texto_debil: { regla: "Texto fuerte con más brillo y menos saturación, para textos secundarios; mínimo 4.5:1.", aplicado: "#3B685D (6.32; 5.48 en crema)" }
+  stroke_fuerte: { regla: "Menos brillo y saturación hasta un gris medio para lo interactivo; mínimo 3:1.", aplicado: "#788783 (3.76; 3.26 en crema)" }
+  stroke_debil: { regla: "Gris claro decorativo, sin contraste mínimo; nunca como único indicador de algo interactivo.", aplicado: "#E1E5E4 (1.27)" }
+  acento_fuera_de_la_paleta:
+    rojo_buzon: { hex: "#AE1E25", contraste: { bg: 6.97, surface: 6.05, blanco_sobre_rojo: 6.97 }, regla: "Solo wordmark, matasellos y estampillas. Nunca botones ni links, para que lo clickeable sea siempre verde." }
+
+colors:
+  brand:
+    var: --brand
+    hex: "#127863"
+    contraste: { bg: 5.40, surface: 4.68, blanco_sobre_brand: 5.40 }
+    usar_en: ["botón primario (texto blanco)", "links", "anillo de foco", "títulos de las postales"]
+    no_usar_en: ["fondos grandes de sección", "junto al rojo como único diferenciador (1.29)"]
+  texto_fuerte:
+    var: --text-strong
+    hex: "#06382B"
+    contraste: { bg: 13.06, surface: 11.33 }
+    usar_en: ["títulos", "cuerpo", "bordes bold", "sombra de las postales", "cuadros oscuros del damero"]
+    no_usar_en: ["texto sobre --brand (2.42)"]
+  texto_debil:
+    var: --text-weak
+    hex: "#3B685D"
+    contraste: { bg: 6.32, surface: 5.48 }
+    usar_en: ["firma, fecha y fuente de cada reseña", "horarios", "metadatos"]
+  stroke_fuerte:
+    var: --stroke-strong
+    hex: "#788783"
+    contraste: { bg: 3.76, surface: 3.26 }
+    usar_en: ["inputs", "botón secundario Cómo llegar", "separadores funcionales"]
+  stroke_debil:
+    var: --stroke-weak
+    hex: "#E1E5E4"
+    contraste: { bg: 1.27 }
+    usar_en: ["divisores", "renglones de las postales"]
+  extras:
+    superficie: { var: --surface, hex: "#F7EEDC", uso: "papel de las postales y cuadros claros del damero; es el crema real de las baldosas del salón" }
+    rojo_buzon: { var: --accent-red, hex: "#AE1E25", uso: "wordmark, matasellos y estampillas" }
+
+wordmark:
+  propuesta: "Logo tipográfico, porque no hay oficial. 'El Viejo' en Chivo 500 a 0.618em, encima de 'Buzón' en Alfa Slab One, todo en --text-strong. La tilde de la ó va en --accent-red."
+  simbolo: "Pictograma SVG del buzón rojo de la puerta: columna con tapa redonda y ranura, en --accent-red, con alto de 1.618 veces el ancho. Va a la izquierda del texto y se alinea a la altura de las dos líneas."
+  variantes: ["horizontal en el header (32–40px de alto)", "solo el pictograma como favicon y en el centro del matasellos"]
+  reglas: ["Margen libre alrededor igual al ancho del pictograma.", "Sobre fondo oscuro, el texto va en #FFFFFF y el buzón sigue rojo.", "Presentarlo a Toto como propuesta, no como su logo."]
+
+typography:
+  titulos:
+    familia: "Alfa Slab One"
+    pesos: [400]
+    url: "https://fonts.google.com/specimen/Alfa+Slab+One"
+    por_que: "Slab pesada como las letras pintadas de los carteles de chapa y las vidrieras de bodegón; lejos de las serif finas de los bares notables turísticos."
+    glifos: "ñ, Ñ, tildes, ü, ¿ y ¡ verificados con fontTools"
+  cuerpo:
+    familia: "Chivo"
+    pesos: [400, 500, 700]
+    url: "https://fonts.google.com/specimen/Chivo"
+    por_que: "Grotesca de Omnibus-Type, fundición de Buenos Aires: legible en celular y con raíz local."
+    glifos: "ñ, Ñ, tildes, ü, ¿ y ¡ verificados con fontTools"
+  escala: "razón áurea: base 1rem → h3 1.618 → h2 2.618 → h1 4.236 (clamp en mobile)"
+  reglas:
+    - "Sentence case. Sin MAYÚSCULAS sostenidas ni eyebrows."
+    - "Alfa Slab One solo de 1.618rem para arriba; nunca en cuerpo ni botones."
+    - "Horarios y precios con font-variant-numeric: tabular-nums."
+
+spacing:
+  sistema: golden_ratio
+  base: "1rem"
+  escala_rem: [0.382, 0.618, 1, 1.618, 2.618, 4.236, 6.854]
+  reglas:
+    - "Solo valores de la escala."
+    - "Dentro de componentes: 0.382 a 1.618rem. Entre bloques: 1.618 a 2.618rem."
+    - "Entre secciones: --section-y, nunca menos de 2.618rem."
+    - "Desde 1024px, hero en 1fr / 1.618fr (la columna grande es la foto). Debajo de 1024px, una sola columna."
+    - "Mobile: 2.618rem entre header y h1."
+radii:
+  sm: { var: --r-sm, usar_en: ["inputs"] }
+  md: { var: --r-md, usar_en: ["botones", "fotos"] }
+  full: { var: --r-full, usar_en: ["matasellos y badges"] }
+  postales: "0, con borde de estampilla (máscara dentada) en el sello de cada tarjeta"
+borders:
+  thin: { var: --border-thin, usar_en: ["inputs", "botón secundario"] }
+  bold: { var: --border-bold, usar_en: ["foto del hero", "postales de reseñas"] }
+  stamp: { var: --border-stamp, usar_en: ["marco interno de la estampilla"] }
+  sombra: { var: --shadow-card, regla: "sin blur, solo postales y foto del hero" }
+
+art_direction:
+  concepto: "Correo de barrio: el nombre del bar convertido en sistema. Las reseñas son cartas y postales que llegaron al buzón, y Toto es el remitente."
+  diferenciacion: "Los bares notables y bodegones suelen comunicar con sepia, serif de época y fileteado decorativo. El Viejo Buzón usa su propio nombre: estampillas, matasellos y postales, con un verde de bar notable y de Ferro en vez de sepia."
+  hero:
+    foto: "fotos-extra/clarin-portada-esquina.jpg (2000×1500): Toto y el mozo con camisa verde sosteniendo platos, con las camisetas de fútbol detrás. Es la mejor foto: tiene a Toto, la comida, el verde y la historia en una sola imagen."
+    encuadre: "object-fit: cover, object-position 35% 40% para que Toto quede en el tercio izquierdo de la foto. aspect-ratio 1.618/1 en escritorio y 4/3 en mobile."
+    alternativa: "Si no se puede usar, fotos-extra/clarin-toto-choripan.jpg (Toto solo con el choripán)."
+    layout: "h1 y bajada a la izquierda; a la derecha, la foto grande de Toto con borde bold."
+    elemento_audaz: "Matasellos circular en --accent-red sobre la esquina de la foto, con 'Caballito · Neuquén 1100 · frente a Ferro' en el anillo y líneas onduladas de cancelación que cruzan hacia el texto. Rotación fija de -8°, sin animación automática."
+    cta: ["Llamá al 4433-3061, tel:+541144333061 (primario; WhatsApp no relevado, si aparece pasa a primario)", "Cómo llegar (secundario)"]
+    copy: "Lo define el Copywriter; la propuesta de pitch es que Toto y 'como en casa' encabecen."
+  resenas:
+    formato: "Cada reseña es una postal sobre --surface: texto citado a la izquierda, a la derecha una estampilla dentada con la inicial del autor y debajo la firma y la fuente en --text-weak."
+    layout: "5 postales: en escritorio, 3 arriba y 2 abajo solapadas y rotadas entre -2° y 2°; en mobile, apiladas. Nunca carrusel."
+    cuales: "Las reseñas 1 a 5 de resenas-carta.md, textuales y con su fuente. Las de carta.menu no tienen autor: firmar como 'Reseña en carta.menu'. La 6 no va porque solo está la traducción al inglés, y la negativa tampoco."
+    dato: "Google: 4,0 con más de 1.800 reseñas (Sluurpy, junio de 2025). Mostrarlo solo si el Copywriter lo aprueba; no mostrar 3,3 ni 3,4."
+    reglas: ["Solo reseñas reales con fuente y link.", "No mostrar el puntaje 3,3; mostrar la cantidad de reseñas y 'Ver en Google' cuando exista la ficha."]
+  fotos:
+    hero: "fotos-extra/clarin-portada-esquina.jpg"
+    ubicacion: "fotos-extra/cartamenu-31770116.jpg (fachada verde con el buzón rojo de la puerta)"
+    carta: ["fotos/plato-suprema-maryland_clarin.jpg", "fotos/plato-rabas_clarin.jpg", "fotos/plato-tortilla-vaga_clarin.jpg"]
+    historia: ["fotos/salon-camisetas-ferro_turismo-ba.jpg", "fotos/salon-renovado_clarin.jpg"]
+    no_usar: ["fachada-verde-buzon-rojo_turismo-ba.jpg en el hero (1200×489, el buzón queda chico y cortado)", "fotos de usuarios de baja resolución (437px) en tamaños grandes"]
+    derechos: "Las fotos de Clarín (Maxi Failla) son solo para la demo. Para publicar hacen falta fotos propias o un permiso."
+  motivos:
+    - "Damero: una franja de 1.618rem de cuadros --text-strong/--surface como separador entre el hero y las reseñas, igual al piso calcáreo del salón. Máximo dos por página."
+    - "Matasellos y estampillas en --accent-red."
+  iconos: "Lucide (viene con shadcn), trazo 2px. Nunca emojis."
+  evitar:
+    - "Sepia, foto vintage con filtro y tipografía script de 'bar antiguo'"
+    - "Fileteado como decoración genérica; como mucho un detalle si el local ya lo tiene en el cartel"
+    - "Componentes shadcn sin tocar: radios y sombras por defecto, tarjetas idénticas en grilla"
+    - "Fondo crema general; el papel va solo en las postales"
+    - "Verde y blanco en franjas de camiseta: el guiño a Ferro es solo el color, no el escudo ni los símbolos del club"
+
+references:
+  - { nombre: "Fileteado porteño (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fileteado", tomar: "el oficio de la letra pintada de los carteles de Buenos Aires, de donde sale la slab; evitar los ornamentos" }
+  - { nombre: "Bares Notables de Buenos Aires (Turismo Ciudad)", url: "https://turismo.buenosaires.gob.ar/es/article/bares-notables", tomar: "cómo se presenta hoy un bar notable, para diferenciarnos de ese tono oficial y sepia" }
+  - { nombre: "Café Tortoni", url: "https://www.cafetortoni.com.ar/", tomar: "lo que NO hacemos: lujo de época; El Viejo Buzón es de barrio y cercano" }
+  - { nombre: "Postmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Postmark", tomar: "anatomía real del matasellos: anillo con texto, fecha al centro y líneas de cancelación" }
+  - { nombre: "Ficha en Turismo Buenos Aires", url: "https://turismo.buenosaires.gob.ar/es/otros-establecimientos/el-viejo-buzon", tomar: "datos oficiales y el reconocimiento de la Ciudad como argumento de confianza" }
+
+data:
+  fuente: "ficha.md y resenas-carta.md (actualización 26/10)"
+  direccion: "Neuquén 1100 esq. Espinosa, Caballito, CABA"
+  telefono: "+54 11 4433-3061 (Godiamo lo publica con el 9, podría ser WhatsApp: CONFIRMAR)"
+  email: "elviejobuzon@hotmail.com"
+  instagram: "@elviejobuzon"
+  horarios: { lun_jue_dom: "9:00–0:00", vie: "9:00–1:00", sab: "CONFIRMAR (probablemente 9:00–1:00)", fuente: "Godiamo, 16/10/2026" }
+  resenas: "resenas-carta.md, de la 1 a la 5"
+  carta_con_precio: "Clarín, mayo 2026; los precios pueden estar desactualizados, así que mostrarlos con 'precios de mayo 2026' o no mostrarlos"
+
+quality:
+  breakpoints_px: [390, 768, 1024, 1440]
+  reglas:
+    - "Sin scroll horizontal; el matasellos se recorta con overflow: clip."
+    - "Foco visible con --focus-ring; objetivos táctiles de 44×44px como mínimo."
+    - "Un solo H1, skip link y alt en todas las fotos."
+    - "Barra fija en mobile con Llamar y Cómo llegar (más WhatsApp si se confirma); padding-bottom en body."
+    - "noindex mientras sea demo."
+  lighthouse_mobile: { performance: ">=90", accessibility: ">=95", cls: "<0.1" }
