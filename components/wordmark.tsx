@@ -17,17 +17,10 @@ function AccentO() {
   );
 }
 
-export function Wordmark({
-  size = "header",
-  id,
-}: {
-  size?: "header" | "hero";
-  id?: string;
-}) {
-  const Tag = size === "hero" ? "h1" : "span";
+export function Wordmark({ id }: { id?: string }) {
   return (
-    <Tag id={id} className={`wordmark wordmark-${size}`}>
-      {size === "hero" ? <span className="sr-only">El Viejo Buzón</span> : null}
+    <h1 id={id} className="wordmark wordmark-header">
+      <span className="sr-only">El Viejo Buzón</span>
       <span className="wordmark-visual" aria-hidden="true">
         <MailboxIcon />
         <span className="wordmark-lines">
@@ -38,6 +31,6 @@ export function Wordmark({
           </span>
         </span>
       </span>
-    </Tag>
+    </h1>
   );
 }

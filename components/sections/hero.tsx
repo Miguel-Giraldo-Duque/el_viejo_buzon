@@ -1,7 +1,6 @@
 import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Postmark } from "@/components/postmark";
-import { Wordmark } from "@/components/wordmark";
 import type { Site } from "@/lib/types";
 
 export function Hero({ site }: { site: Site }) {
@@ -12,7 +11,6 @@ export function Hero({ site }: { site: Site }) {
     <section className="hero" aria-labelledby="hero-title">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <Wordmark id="hero-title" size="hero" />
           <p className="lede">{hero.lede}</p>
           <p className="story">{hero.story}</p>
           <blockquote className="hero-quote">

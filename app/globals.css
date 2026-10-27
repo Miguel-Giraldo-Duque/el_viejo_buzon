@@ -28,12 +28,13 @@
 html {
   color-scheme: light;
   overflow-x: clip;
+  background: var(--surface);
 }
 
 body {
   margin: 0;
   min-height: 100dvh;
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text-strong);
   font-family: var(--font-body);
   font-size: var(--fs-base);
@@ -162,10 +163,6 @@ img {
   font-weight: 400;
 }
 
-.wordmark-hero {
-  font-size: var(--fs-h1);
-}
-
 .wordmark-visual {
   display: inline-flex;
   align-items: center;
@@ -273,6 +270,7 @@ img {
 .hero-figure {
   position: relative;
   margin: 0;
+  overflow: visible;
 }
 
 .hero-figure img {
@@ -287,14 +285,15 @@ img {
 
 .postmark {
   position: absolute;
-  width: min(16.5rem, 64%);
+  width: 6.6rem;
   height: auto;
-  left: 0.35rem;
-  top: 0.45rem;
+  left: -1.7rem;
+  top: -1.7rem;
   transform: rotate(-8deg);
-  transform-origin: 70% 40%;
+  transform-origin: 18% 22%;
   pointer-events: none;
   overflow: visible;
+  z-index: 2;
 }
 
 .damero {
@@ -585,10 +584,6 @@ img {
     display: contents;
   }
 
-  .wordmark-hero {
-    order: 1;
-  }
-
   .lede {
     order: 2;
   }
@@ -611,7 +606,7 @@ img {
 }
 
 @media (max-width: 767px) {
-  body {
+  body:has(.mobile-bar.is-visible) {
     padding-bottom: 5.8rem;
   }
 
@@ -621,10 +616,15 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     gap: 0.618rem;
     padding: 0.618rem var(--gutter) calc(0.618rem + env(safe-area-inset-bottom));
     background: var(--surface);
+    border-top: var(--border-bold);
+  }
+
+  .mobile-bar.is-visible {
+    display: flex;
   }
 
   .mobile-bar [data-slot="button"] {
@@ -661,9 +661,9 @@ img {
   }
 
   .postmark {
-    width: min(22rem, 62%);
-    left: -1.5rem;
-    top: 1rem;
+    width: 8rem;
+    left: -2.2rem;
+    top: -2.4rem;
   }
 
   .postal-grid {

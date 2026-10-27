@@ -77,7 +77,9 @@ html = html.replace(
   },
 );
 
-html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (tag) =>
+  tag.includes('id="mobile-bar-boot"') ? tag : "",
+);
 html = html.replace(/<script\b[^>]*\/>/gi, "");
 html = html.replace(/<link\b[^>]*rel="(?:preload|modulepreload|prefetch)"[^>]*>/gi, "");
 
@@ -89,6 +91,9 @@ if (/fonts\.google|fonts\.gstatic/i.test(html)) {
 }
 if (!html.includes("El Viejo") || !html.includes("noindex")) {
   throw new Error("El HTML no tiene el contenido o el meta robots.");
+}
+if (!html.includes('id="mobile-bar-boot"') || !html.includes("IntersectionObserver")) {
+  throw new Error("El HTML autocontenido perdió el script de la barra móvil.");
 }
 
 const exportDir = path.join(root, "export");

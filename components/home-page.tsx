@@ -20,8 +20,8 @@ export function HomePage({ site }: { site: Site }) {
           Saltar al contenido
         </a>
         <div className="wrap header-row">
-          <a className="brand-link" href="#contenido" aria-label="El Viejo Buzón">
-            <Wordmark />
+          <a className="brand-link" href="#contenido">
+            <Wordmark id="hero-title" />
           </a>
           <div className="header-tools">
             <nav className="nav-links" aria-label="Secciones">
