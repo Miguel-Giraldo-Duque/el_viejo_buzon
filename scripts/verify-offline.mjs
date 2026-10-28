@@ -94,7 +94,7 @@ async function audit(width, height) {
       h1: h1?.innerText ?? "",
       heroNatural: img ? [img.naturalWidth, img.naturalHeight] : null,
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
-      hasTel: !!document.querySelector('a[href^="tel:+541144333061"]'),
+      hasTel: !!document.querySelector('a[href^="tel:+541159319962"]'),
       hasMaps: !!document.querySelector('a[href*="google.com/maps"]'),
       hasWa: text.includes("wa.me") || !!document.querySelector('a[href*="wa.me"]'),
       hasNegative: /unrecognizable|Soy C/.test(text),

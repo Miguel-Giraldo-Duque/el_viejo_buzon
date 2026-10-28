@@ -10,8 +10,8 @@ meta:
   robots: noindex, nofollow
 
 contact:
-  phone_display: "+54 11 4433-3061"
-  phone_tel: "tel:+541144333061"
+  phone_display: "+54 11 5931-9962"
+  phone_tel: "tel:+541159319962"
   email: elviejobuzon@hotmail.com
   instagram: "@elviejobuzon"
   instagram_url: "https://www.instagram.com/elviejobuzon/"
@@ -21,16 +21,16 @@ address:
   neighborhood_note: A 0,82 km de Plaza Irlanda.
   maps_url: "https://www.google.com/maps/search/?api=1&query=El+Viejo+Buz%C3%B3n+Neuqu%C3%A9n+1100+Caballito+Buenos+Aires"
   maps_label: Cómo llegar
-  photo: /fotos/fachada-buzon.jpg
-  photo_alt: Fachada verde de El Viejo Buzón en la esquina, con el buzón rojo junto a la puerta.
-  photo_width: 534
-  photo_height: 534
+  photo: /fotos/fachada-agosto.jpg
+  photo_alt: Fachada de El Viejo Buzón con el toldo verde y blanco, el cartel de Bar Notable y el buzón rojo frente a la puerta.
+  photo_width: 1080
+  photo_height: 858
 
 footer:
   lines:
     - elviejobuzon@hotmail.com
     - Instagram @elviejobuzon
-  credit: "Fotos de Toto y de los platos: Maxi Failla, Clarín, mayo de 2026. Fachada: carta.menu. El wordmark es una propuesta: no hay logo oficial del bar."
+  credit: "Salón: @elviejobuzon, 16 de octubre de 2026. Fachada: @elviejobuzon, 7 de agosto de 2026. Platos: Maxi Failla, Clarín, mayo de 2026. El wordmark es una propuesta: no hay logo oficial del bar."
 
 sections:
   hero:
@@ -40,12 +40,12 @@ sections:
     quote: Esta es una esquina con magia.
     quote_source: Clarín
     postmark: "Caballito · Neuquén 1100 · frente a Ferro"
-    call_label: Llamar al +54 11 4433-3061
-    image: /fotos/clarin-portada-esquina.jpg
-    image_alt: Toto Evangelista y un mozo con camisa verde sostienen platos en el salón de El Viejo Buzón. Detrás hay camisetas de fútbol.
-    image_width: 2000
-    image_height: 1500
-    object_position: 35% 40%
+    call_label: Llamar al +54 11 5931-9962
+    image: /fotos/salon-octubre.jpg
+    image_alt: Salón lleno de El Viejo Buzón. Toto está sentado a una mesa y los mozos de camisa verde atienden la barra y las mesas.
+    image_width: 4096
+    image_height: 2730
+    object_position: 42% 78%
 
   reviews:
     enabled: true
@@ -86,7 +86,7 @@ sections:
     enabled: true
     title: La carta
     price_note: Precios pendientes de confirmar.
-    dessert_note: "Postres: pendiente. La sección figura en la carta y no se pudo leer."
+    dessert_note: ""
     photos:
       - src: /fotos/plato-suprema-maryland.jpg
         alt: Suprema Maryland empanada, con guarnición, en un plato del bar.
@@ -112,6 +112,7 @@ sections:
           - Croquetas de pollo y verdeo
           - Croquetas de jamón crudo con portobello
           - Albóndigas con fileto
+          - Tortilla vaga
           - Tortilla clásica
           - Tortilla española
           - Rabas, provenzal o con tártara
@@ -139,6 +140,14 @@ sections:
           - Suprema
           - Suprema Maryland
           - Milanesa para compartir
+      - name: Platos de la casa
+        items:
+          - Bife ferroviario
+          - Matambrito a la pizza
+          - Matambrito a la fugazzetta
+          - Costillitas de cerdo
+          - Cazuela de pescado
+          - Pizza
       - name: Pastas caseras
         items:
           - Ñoquis
@@ -148,11 +157,25 @@ sections:
       - name: Sándwiches
         items:
           - Jamón crudo Cárdenas
+          - Choripán
       - name: Panadería de doña Carmen
         items:
           - Medialunas de grasa
           - Medialunas de manteca
           - Medialunas rellenas
+          - Fosforitos doble de jamón y queso
+          - Trío de chips
+          - Tostón de palta
+      - name: Postres
+        items:
+          - Strudel
+          - Lemon pie
+          - Tarta vasca
+      - name: Bebidas
+        items:
+          - Vermú de grifo
+          - Vermut ferroviario
+          - Jarras de cancha
       - name: Platos de olla
         items:
           - Guiso de lentejas
@@ -177,14 +200,10 @@ sections:
     enabled: true
     title: Horarios
     rows:
-      - label: Lunes a jueves
-        value: 9 a 0
-      - label: Viernes
-        value: 9 a 1
-      - label: Sábado
-        value: consultar
-      - label: Domingo
-        value: 9 a 0
+      - label: Domingo a jueves
+        value: 8 a 1
+      - label: Viernes, sábados y vísperas
+        value: 8 a 2
 
   cta:
     enabled: false
